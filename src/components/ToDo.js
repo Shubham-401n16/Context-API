@@ -3,6 +3,9 @@ import ToDoForm from './ToDoForm';
 import ToDoList from './ToDoList';
 import Container from 'react-bootstrap/Container';
 import useFetch from '../hooks/useFetch';
+import Settings from './Settings';
+import { PaginationContext } from '../Contexts';
+
 
 function ToDo(props) {
     const { setRequest, response } = useFetch({
@@ -41,14 +44,17 @@ function ToDo(props) {
 
     return (
         <Container id = "main-container">
+             <PaginationContext.Provider value={{}}>
             <ToDoForm addTask={addTask} />
+            <Settings/>
             <ToDoList 
             tasks={response} 
             modifyTask={modifyTask} 
             deleteTask={deleteTask}
             />
+             </PaginationContext.Provider>
         </Container>
-    );
+    )
 }
 
 export default ToDo;

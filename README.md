@@ -7,7 +7,7 @@
 ### Links and Resources
 * [Code Sandbox](https://codesandbox.io/s/github/Shubham-401n16/Hooks-API)
 * [Github Actions]
-* [PR](https://github.com/Shubham-401n16/Custom-Hooks/pull/1)
+* [PR](https://github.com/Shubham-401n16/Context-API/pull/1)
 * [Netlify App](https://priceless-shockley-b74e26.netlify.app)
 
 #### Documentation
