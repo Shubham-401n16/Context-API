@@ -4,10 +4,14 @@ import ToDoList from './ToDoList';
 import Container from 'react-bootstrap/Container';
 import useFetch from '../hooks/useFetch';
 import Settings from './Settings';
-import { PaginationContext } from '../Contexts';
+import PaginationContext from '../Contexts';
 
 
 function ToDo(props) {
+
+    const [displayCount, setDisplayCount] = useState(3);
+    const [showCompleted, setShowCompleted] = useState(true);
+
     const { setRequest, response } = useFetch({
         url: 'https://todo-server-401n16.herokuapp.com/api/v1/todo',
     });
@@ -43,17 +47,25 @@ function ToDo(props) {
     }
 
     return (
-        <Container id = "main-container">
-             <PaginationContext.Provider value={{}}>
-            <ToDoForm addTask={addTask} />
-            <Settings/>
-            <ToDoList 
-            tasks={response} 
-            modifyTask={modifyTask} 
-            deleteTask={deleteTask}
-            />
-             </PaginationContext.Provider>
-        </Container>
+        <PaginationContext.Provider
+            value={{
+                displayCount,
+                setDisplayCount,
+                showCompleted,
+                setShowCompleted,
+            }}
+        >
+            <Container id="main-container">
+                <ToDoForm addTask={addTask} />
+                <Settings />
+                <ToDoList
+                    tasks={response}
+                    modifyTask={modifyTask}
+                    deleteTask={deleteTask}
+                />
+            </Container >
+        </PaginationContext.Provider>
+
     )
 }
 
