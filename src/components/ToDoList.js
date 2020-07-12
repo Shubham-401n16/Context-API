@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import ToDoItem from './ToDoItem';
+import ListDisplay from './DisplayList';
 import Context from '../Contexts'
 
 function ToDoList(props) {
@@ -25,7 +26,7 @@ function ToDoList(props) {
     return (
         <div>
             <h1>Tasks</h1>
-            {items}
+            <ListDisplay list={items}/>
         </div>
     );
 }

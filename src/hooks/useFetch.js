@@ -12,7 +12,6 @@ function useFetch(initRequest) {
         async function customFetch() {
             await setIsLoading(true);
             await setError(null);
-            await setResponse(null);
 
             let res = await fetch(request.url ? request.url : url, {
                 method: request.method || 'GET',

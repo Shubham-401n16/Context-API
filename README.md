@@ -5,10 +5,10 @@
 ### Author: Shubham Majumdar
 
 ### Links and Resources
-* [Code Sandbox](https://codesandbox.io/s/github/Shubham-401n16/Hooks-API)
+* [Code Sandbox](https://codesandbox.io/s/delicate-violet-29qrc)
 * [Github Actions]
 * [PR](https://github.com/Shubham-401n16/Context-API/pull/1)
-* [Netlify App](https://priceless-shockley-b74e26.netlify.app)
+* [Netlify App](https://react-contextapi.netlify.app)
 
 #### Documentation
 * [api docs](http://xyz.com/api-docs) (API servers)

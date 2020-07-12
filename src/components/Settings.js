@@ -13,10 +13,13 @@ function Settings(props) {
                 value={data.displayCount}
                 onChange={(e) => {
                     data.setDisplayCount(parseInt(e.target.value));
-                }} />
+                }} 
+                />
                 <label>Show Complete</label>
-            <input type="checkbox" checked={data.showCompleted} onChange={(e) => {
-                data.setShowComplete(!data.showCompleted);
+            <input type="checkbox" 
+            checked={data.showCompleted} 
+            onChange={(e) => {
+                data.setShowCompleted(!data.showCompleted);
             }} />
 
         </div>
